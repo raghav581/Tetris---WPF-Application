@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Tetris
 {
-    internal class GameGrid
+    public class GameGrid
     {
         private int[,] grid;
-        public int Rows;
-        public int Columns;
+        public int Rows { get; set; }
+        public int Columns { get; set; }
         public int this[int r, int c]
         {
             get => grid[r, c];
