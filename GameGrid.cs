@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Tetris
@@ -29,7 +30,7 @@ namespace Tetris
         }
         public bool IsEmpty(int r, int c)
         {
-            return (IsInside(r, c) && grid[r, c] > 0);
+            return (IsInside(r, c) && grid[r, c] == 0);
         }
         public bool IsRowEmpty(int r) {
             for (int c = 0; c < Columns; c++)
